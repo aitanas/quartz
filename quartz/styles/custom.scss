@@ -1,3 +1,132 @@
 @use "./variables.scss" as *;
 
 // put your custom CSS here!
+@font-face {
+  font-family: "Pixelta";
+  src:
+    url("/static/Pixelta-Regular.woff2") format("woff2"),
+    url("/static/Pixelta-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "The Lowly Scribe";
+  src:
+    url("/static/TheLowlyScribe.woff2") format("woff2"),
+    url("/static/TheLowlyScribe.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Alagard";
+  src:
+    url("/static/Alagard.woff2") format("woff2"),
+    url("/static/Alagard.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "LM Mono";
+  src:
+    url("/static/LMMono10-Italic.woff2") format("woff2"),
+    url("/static/LMMono10-Italic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "LM Mono";
+  src:
+    url("/static/LMMono12-Regular.woff2") format("woff2"),
+    url("/static/LMMono12-Regular.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "LM Mono";
+  src:
+    url("/static/LMMonoLt10-Regular.woff2") format("woff2"),
+    url("/static/LMMonoLt10-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Berkahi Blackletter";
+  src:
+    url("/static/BerkahiBlackletter.woff2") format("woff2"),
+    url("/static/BerkahiBlackletter.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Pixel Operator";
+  src:
+    url("/static/PixelOperator-Bold.woff2") format("woff2"),
+    url("/static/PixelOperator-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Pixel Operator";
+  src:
+    url("/static/PixelOperator.woff2") format("woff2"),
+    url("/static/PixelOperator.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Pixel Operator SC";
+  src:
+    url("/static/PixelOperatorSC-Bold.woff2") format("woff2"),
+    url("/static/PixelOperatorSC-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Pixel Operator SC";
+  src:
+    url("/static/PixelOperatorSC.woff2") format("woff2"),
+    url("/static/PixelOperatorSC.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Reactor7";
+  src:
+    url("/static/Reactor7.woff2") format("woff2"),
+    url("/static/Reactor7.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Airmail";
+  src:
+    url("/static/Airmail.woff2") format("woff2"),
+    url("/static/Airmail.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}

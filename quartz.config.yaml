@@ -1,24 +1,25 @@
 # yaml-language-server: $schema=./quartz/plugins/quartz-plugins.schema.json
 configuration:
-  pageTitle: Quartz 5
+  pageTitle: aespers' digital garden
   pageTitleSuffix: ""
   enableSPA: true
   enablePopovers: true
   analytics:
     provider: plausible
   locale: en-US
-  baseUrl: aesper.neocities.org/blog
+  baseUrl: aesper.neocities.org/garden
   ignorePatterns:
     - private
     - templates
     - .obsidian
   theme:
-    fontOrigin: googleFonts
+    fontOrigin: "local"
     cdnCaching: true
     typography:
-      header: Schibsted Grotesk
-      body: Source Sans Pro
-      code: IBM Plex Mono
+      title: "Berkahi Blackletter"
+      header: "Pixelta"
+      body: "Pixel Operator"
+      code: "Airmail"
     colors:
       lightMode:
         light: "#faf8f8"
@@ -31,16 +32,21 @@ configuration:
         highlight: rgba(143, 159, 169, 0.15)
         textHighlight: "#fff23688"
       darkMode:
-        light: "#161618"
+        light: "#282828"
         lightgray: "#393639"
-        gray: "#646464"
-        darkgray: "#d4d4d4"
-        dark: "#ebebec"
-        secondary: "#7b97aa"
-        tertiary: "#84a59d"
+        gray: "#a9b5b7"
+        darkgray: "#83a598"
+        dark: "#9c1c33"
+        secondary: "#aaaf50"
+        tertiary: "#9c1c33"
         highlight: rgba(143, 159, 169, 0.15)
         textHighlight: "#b3aa0288"
 plugins:
+  - source: "@quartz-themes/core"
+    enabled: false
+    options:
+      theme: "alice-velvet"
+      mode: "both"
   - source: "@quartz-community/created-modified-date"
     enabled: true
     options:
@@ -99,7 +105,13 @@ plugins:
     enabled: false
     order: 92
   - source: "@quartz-community/quartz-fonts"
-    enabled: true
+    enabled: false
+    options:
+      useThemeFonts: false
+      fontOrigin: selfHosted
+      body: "Airmail"
+      header: "Pixelta"
+      code: "LM Mono"
   - source: "@quartz-themes/core"
     enabled: false
     options:
@@ -131,7 +143,7 @@ plugins:
   - source: "@quartz-community/favicon"
     enabled: true
   - source: "@quartz-community/og-image"
-    enabled: true
+    enabled: false
   - source: "@quartz-community/cname"
     enabled: true
   - source: "@quartz-community/canvas-page"
@@ -208,14 +220,14 @@ plugins:
     options:
       provider: giscus
       options:
-        repo: TODO:username/repo-name
-        repoId: TODO:your-repo-id
+        repo: aitanas/quartz
+        repoId: R_kgDOVDNBmw
         category: Announcements
-        categoryId: TODO:your-category-id
+        categoryId: DIC_kwDOVDNBm84DHgsB
         mapping: url
         strict: true
         reactionsEnabled: true
-        inputPosition: bottom
+        inputPosition: top
         lightTheme: light
         darkTheme: dark
         lang: en
