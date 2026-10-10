@@ -1,0 +1,43 @@
+name: Build and Deploy Quartz to aesper
+on:
+  push:
+    branches:
+      - v5
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout Quartz repository
+        uses: actions/checkout@v5
+      - name: Set up Node.js
+        uses: actions/setup-node@v5
+        with:
+          node-version: 24
+      - name: Install dependencies
+        run: npm ci
+      - name: Clone target website repo
+        env:
+          REPO_URL: https://x-access-token:${{ secrets.TARGET_REPO_TOKEN }}@github.com/aitanas/aesper.git
+        run: |
+          git clone $REPO_URL ../target-repo
+      - name: Build Quartz site
+        run: npx quartz build
+      - name: Replace output in target repo
+        run: |
+          rm -rf ../target-repo/public/writings/digitalgarden
+          mkdir -p ../target-repo/public
+          mv public ../target-repo/public/writings/digitalgarden
+      - name: Commit and push changes
+        env:
+          COMMIT_EMAIL: github-actions[bot]@users.noreply.github.com
+          COMMIT_NAME: github-actions[bot]
+        run: |
+          cd ../target-repo
+          git config user.name "$COMMIT_NAME"
+          git config user.email "$COMMIT_EMAIL"
+          git add public/garden
+          if git diff --cached --quiet; then
+            echo "no changes to commit"
+          else
+            git commit -m "update Quartz build output"
+            git push origin main  # change to your target branch if needed
