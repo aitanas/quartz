@@ -24,9 +24,9 @@ jobs:
         run: npx quartz build
       - name: Replace output in target repo
         run: |
-          rm -rf ../target-repo/public/writings/digitalgarden
-          mkdir -p ../target-repo/public
-          mv public ../target-repo/public/writings/digitalgarden
+          rm -rf ../aesper/public/garden
+          mkdir -p ../aesper/public
+          mv public ../aesper/public/garden
       - name: Commit and push changes
         env:
           COMMIT_EMAIL: github-actions[bot]@users.noreply.github.com
