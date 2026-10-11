@@ -16,10 +16,10 @@ configuration:
     fontOrigin: "local"
     cdnCaching: true
     typography:
-      title: "Berkahi Blackletter"
-      header: "Pixelta"
-      body: "Pixel Operator"
-      code: "Airmail"
+      title: Pixelta
+      header: Pixelta
+      body: Segoe UI
+      code: Airmail
     colors:
       lightMode:
         light: "#faf8f8"
